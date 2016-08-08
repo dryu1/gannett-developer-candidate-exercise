@@ -38,7 +38,7 @@ public class ArticleAction {
 		
 		String themeString = contentJson.get("theme").toString().replace("\"", "");
 		
-		if (themeString.trim().equalsIgnoreCase("well))	{
+		if (themeString.trim().equalsIgnoreCase("well"))	{
 			theme = true;
 		}	else	{
 			theme = false;
