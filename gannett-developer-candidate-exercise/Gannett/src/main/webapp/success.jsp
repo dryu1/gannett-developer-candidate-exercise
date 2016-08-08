@@ -31,7 +31,7 @@
 			</tr>
 			<tr>
 				<th>URL</th>
-				<th class="${theme ? 'well' : 'rare'}">${item.href}</th>
+				<th class="${theme ? 'well' : 'rare'}"><a href="${item.href}">${item.href}</a></th>
 			</tr>
 		</c:forEach>
 	</table>
