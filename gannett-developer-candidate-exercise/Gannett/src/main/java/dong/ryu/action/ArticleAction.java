@@ -30,15 +30,15 @@ public class ArticleAction {
 		
 		for (JsonNode it : articleNodes)	{
 			Article article = new Article();
-			article.setTitle(it.get("title").toString());						
-			article.setSummary(it.get("summary").toString());
-			article.setHref(it.get("href").toString());			
+			article.setTitle(it.get("title").toString().replace("\"", ""));						
+			article.setSummary(it.get("summary").toString().replace("\"", ""));
+			article.setHref(it.get("href").toString().replace("\"", ""));			
 			articles.add(article);
 		}
 		
-		String themeString = contentJson.get("theme").toString();
+		String themeString = contentJson.get("theme").toString().replace("\"", "");
 		
-		if (themeString.trim().equalsIgnoreCase("\"well\""))	{
+		if (themeString.trim().equalsIgnoreCase("well))	{
 			theme = true;
 		}	else	{
 			theme = false;
